@@ -1,0 +1,53 @@
+@import "themeB";
+
+@mixin boxStyle() {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: 1px solid #b8b5b5;
+  width: 7rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  border-radius: $border-radius;
+}
+
+body {
+  padding: 0;
+  margin: 5rem;
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+
+    .box {
+      height: 5rem;
+      padding: 0.5rem;
+
+      @include boxStyle();
+
+      &.base {
+        background-color: $base-color;
+      }
+
+      &.important {
+        background-color: $important-color;
+      }
+
+      &.warning {
+        background-color: $warning-color;
+      }
+    }
+  }
+
+  .main-font {
+    font-family: $main-font;
+  }
+  .secondary-font {
+    font-family: $secondary-font;
+  }
+  .box-shadow {
+    @include boxStyle();
+    padding-left: 0.5rem;
+    box-shadow: $box-shadow;
+  }
+}

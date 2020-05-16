@@ -1,0 +1,7 @@
+$base-color: #0000ff;
+$important-color: darken($base-color, 20%);
+$warning-color: rgba(red($base-color), blue($base-color), blue($base-color), 1);
+$main-font: "Times New Roman", Times, serif;
+$secondary-font: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$border-radius: 5px;
+$box-shadow: 8px 8px 8px 2px #737171;
