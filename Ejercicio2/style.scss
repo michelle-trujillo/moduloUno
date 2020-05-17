@@ -14,40 +14,41 @@
 body {
   padding: 0;
   margin: 5rem;
+  .container {
+    .boxes {
+      display: flex;
+      flex-direction: column;
 
-  .boxes {
-    display: flex;
-    flex-direction: column;
+      .box {
+        height: 5rem;
+        padding: 0.5rem;
 
-    .box {
-      height: 5rem;
-      padding: 0.5rem;
+        @include boxStyle();
 
-      @include boxStyle();
+        &.base {
+          background-color: $base-color;
+        }
 
-      &.base {
-        background-color: $base-color;
-      }
+        &.important {
+          background-color: $important-color;
+        }
 
-      &.important {
-        background-color: $important-color;
-      }
-
-      &.warning {
-        background-color: $warning-color;
+        &.warning {
+          background-color: $warning-color;
+        }
       }
     }
-  }
 
-  .main-font {
-    font-family: $main-font;
-  }
-  .secondary-font {
-    font-family: $secondary-font;
-  }
-  .box-shadow {
-    @include boxStyle();
-    padding-left: 0.5rem;
-    box-shadow: $box-shadow;
+    .main-font {
+      font-family: $main-font;
+    }
+    .secondary-font {
+      font-family: $secondary-font;
+    }
+    .box-shadow {
+      @include boxStyle();
+      padding-left: 0.5rem;
+      box-shadow: $box-shadow;
+    }
   }
 }
