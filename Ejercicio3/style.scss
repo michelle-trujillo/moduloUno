@@ -1,0 +1,43 @@
+$base-color: #00697a;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  .menu {
+    display: flex;
+    flex-direction: row;
+    background-color: $base-color;
+
+    .item {
+      background-color: $base-color;
+      flex-grow: 1;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+
+      &:hover {
+        background-color: darken($base-color, 10%);
+      }
+    }
+
+    .item:nth-child(3) {
+      flex-grow: unset;
+    }
+
+    .item:last-child {
+      text-align: right;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .menu {
+      flex-direction: column;
+      justify-items: center;
+      .item {
+        text-align: center;
+      }
+      .item:last-child {
+        text-align: center;
+      }
+    }
+  }
+}
